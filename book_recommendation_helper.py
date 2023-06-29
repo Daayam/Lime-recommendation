@@ -18,5 +18,8 @@ def sort_by_catagory(desired_catagory = None):
         sorted_list = [desired_catagory, books_by_catagory[desired_catagory]]
 
     return sorted_list
+
+def quick_sort(input_list, sort_by):
+    pass
     
 print(sort_by_catagory("All"))
