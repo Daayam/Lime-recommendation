@@ -1,12 +1,18 @@
 from book_recommendation_data import book_catagories, books
 
-def sort_by_catagory():
+def sort_by_catagory(desired_catagory = None):
     books_copy = [ [title, attributes] for title, attributes in books.items()]
     books_by_catagory = {}
 
-    for catagory in book_catagories:        
-        books_by_catagory[catagory] = [book[0] for book in books_copy if book[1][1] == catagory]
-    sorted_list = [[catagory, title] for catagory, title in books_by_catagory.items()]
+    if desired_catagory == None:
+        for catagory in book_catagories:        
+            books_by_catagory[catagory] = [book[0] for book in books_copy if book[1][1] == catagory]
+            sorted_list = [[catagory, titles] for catagory, titles in books_by_catagory.items()]
+    
+    else:
+        books_by_catagory[desired_catagory] = [book[0] for book in books_copy if book[1][1] == desired_catagory]
+        sorted_list = [desired_catagory, books_by_catagory[desired_catagory]]
+
     return sorted_list
 
 print(sort_by_catagory())
