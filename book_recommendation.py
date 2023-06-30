@@ -13,9 +13,11 @@ def what_catagory():
             if show_books == "Yes":
                 return search_result
 
+def display_books(desired_catagory, sort_by):
+    books_in_catagory = sort_by_catagory(desired_catagory) # finds books in catagory
+    sorted_books = quick_sort(books_in_catagory, sort_by) # by default, will sort books by recommended
+    print_list(sorted_books) # shows books
 
 intro() # Greetings
 catagory = what_catagory() # user chooses a catagory
-books_in_catagory = sort_by_catagory(catagory) # finds books in catagory
-print_list(books_in_catagory) # shows books
-
+display_books(catagory) # displays aesthetically all books that meet search criteria
