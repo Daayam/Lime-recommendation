@@ -1,15 +1,17 @@
 from book_recommendation_helper import sort_by_catagory, print_list, quick_sort, auto_complete # import helper functions
 
 def intro():
-    print("Welcome to the greatest book recommendation software! *")
+    print("Welcome to the greatest book recommendation software! *\n")
 
 def what_catagory():
-    print("Please enter the first letter or first few letters of the Genre you are looking for and we'll let you know if we have books in that catagory ")
+    print("Please enter the first letter or first few letters of the Genre you are looking for and we'll let you know if we have books in that catagory \n")
     while True: 
-        choice = input("Which Genre are you looking for? ").title() # user enters part of a catagory
+        choice = input("Which Genre are you looking for? \n").title() # user enters part of a catagory
+        print("\n")
         search_result = auto_complete(choice) # if choice matches a catagory, it is saved in search result. If choice does not match or matches with multiple catagories, auto_complete will return None 
         if search_result != None: # if user input matches only one catagory
-            show_books = input("Would you like to see {genre}? yes or no ".format(genre = search_result)).title()
+            show_books = input("Would you like to see {genre}? yes or no \n".format(genre = search_result)).title()
+            print("\n")
             if show_books == "Yes":
                 return search_result
 
