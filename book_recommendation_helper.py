@@ -19,17 +19,27 @@ def sort_by_catagory(desired_catagory = None): # fucntion to sort books by a giv
 
     return sorted_list
 
-def print_list(list_to_print):
-    print("\n" + list_to_print[0])
-    print("_______________________________________________\n\n")
-    for book in list_to_print[1]:
-        print("{Title} \nBy {Author} \n{Year} \n{Description} \n".format(Title = book, Author = books[book][0], Year = "Year Needed", Description = books[book][2]))
-        print("///////////////////////////////////////////\n")
+def print_list(list_to_print): # function to aesthetically print a list of books
+
+    if len(list_to_print) > 2: # if the list has multiple catagories
+        for catagory in list_to_print: # loop through the different catagories
+            print("\n" + catagory[0]) # print each catagory
+            print("_______________________________________________\n\n")
+            for book in catagory[1]:
+                print("{Title} \nBy {Author} \n{Year} \n{Description} \n".format(Title = book, Author = books[book][0], Year = "Year Needed", Description = books[book][2])) # uses the title (key) of the book to access the details (values) of that book from the books dictionary
+                print("///////////////////////////////////////////\n")
+
+    else: # if the list has one catagory
+        print("\n" + list_to_print[0]) # print catagory
+        print("_______________________________________________\n\n")
+        for book in list_to_print[1]: # loops through each book in the chosen catagory
+            print("{Title} \nBy {Author} \n{Year} \n{Description} \n".format(Title = book, Author = books[book][0], Year = "Year Needed", Description = books[book][2]))
+            print("///////////////////////////////////////////\n")
 
 
 def quick_sort(input_list, sort_by):
     middle = len(input_list)//2 # if sorting by recommended, the smallest value will always be 1, and the largest will always be equal to the number of elements.
    
-x = sort_by_catagory("Health & Fitness")
+x = sort_by_catagory()
 print(x)
 print_list(x)
