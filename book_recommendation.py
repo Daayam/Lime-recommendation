@@ -1,6 +1,6 @@
 from book_recommendation_helper import sort_by_catagory, print_list, quick_sort, auto_complete # import helper functions
 
-def inro():
+def intro():
     print("Welcome to the greatest book recommendation software! *")
 
 def what_catagory():
@@ -13,7 +13,7 @@ def what_catagory():
             if show_books == "Yes":
                 return search_result
 
-def display_books(desired_catagory, sort_by):
+def display_books(desired_catagory, sort_by = None):
     books_in_catagory = sort_by_catagory(desired_catagory) # finds books in catagory
     sorted_books = quick_sort(books_in_catagory, sort_by) # by default, will sort books by recommended
     print_list(sorted_books) # shows books
