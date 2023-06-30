@@ -1,5 +1,8 @@
 from book_recommendation_data import book_catagories, books
 
+def auto_complete(user_input):
+    pass
+
 def sort_by_catagory(desired_catagory = None): # fucntion to sort books by a given catagory
     books_copy = [ [title, attributes] for title, attributes in books.items()] # add all the books to a 2-D list
     books_by_catagory = {} # dictionary used to store books as values and catagories as their respective keys
@@ -35,7 +38,6 @@ def print_list(list_to_print): # function to aesthetically print a list of books
         for book in list_to_print[1]: # loops through each book in the chosen catagory
             print("{Title} \nBy {Author} \n{Year} \n{Description} \n".format(Title = book, Author = books[book][0], Year = "Year Needed", Description = books[book][2]))
             print("///////////////////////////////////////////\n")
-
 
 def quick_sort(input_list, sort_by):
     middle = len(input_list)//2 # if sorting by recommended, the smallest value will always be 1, and the largest will always be equal to the number of elements.
