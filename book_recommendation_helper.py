@@ -19,7 +19,17 @@ def sort_by_catagory(desired_catagory = None): # fucntion to sort books by a giv
 
     return sorted_list
 
+def print_list(list_to_print):
+    print("\n" + list_to_print[0])
+    print("_______________________________________________\n\n")
+    for book in list_to_print[1]:
+        print("{Title} \nBy {Author} \n{Year} \n{Description} \n".format(Title = book, Author = books[book][0], Year = "Year Needed", Description = books[book][2]))
+        print("///////////////////////////////////////////\n")
+
+
 def quick_sort(input_list, sort_by):
     middle = len(input_list)//2 # if sorting by recommended, the smallest value will always be 1, and the largest will always be equal to the number of elements.
    
-print(sort_by_catagory("All"))
+x = sort_by_catagory()
+print(x)
+print_list(x)
