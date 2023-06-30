@@ -11,4 +11,11 @@ def what_catagory():
         if search_result != None: # if user input matches only one catagory
             show_books = input("Would you like to see {genre}? yes or no ".format(genre = search_result)).title()
             if show_books == "Yes":
-                break
+                return search_result
+
+
+intro() # Greetings
+catagory = what_catagory() # user chooses a catagory
+books_in_catagory = sort_by_catagory(catagory) # finds books in catagory
+print_list(books_in_catagory) # shows books
+
