@@ -30,6 +30,6 @@ def print_list(list_to_print):
 def quick_sort(input_list, sort_by):
     middle = len(input_list)//2 # if sorting by recommended, the smallest value will always be 1, and the largest will always be equal to the number of elements.
    
-x = sort_by_catagory()
+x = sort_by_catagory("Health & Fitness")
 print(x)
 print_list(x)
