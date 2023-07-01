@@ -1,6 +1,7 @@
 from book_recommendation_helper import sort_by_catagory, print_list, quick_sort, auto_complete # import helper functions
 
 def intro():
+    print("\n")
     print("Welcome to the greatest book recommendation software! *\n")
 
 def what_catagory():
