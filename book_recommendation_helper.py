@@ -45,6 +45,6 @@ def quick_sort(input_list, sort_by):
     middle = len(input_list)//2 # if sorting by recommended, the smallest value will always be 1, and the largest will always be equal to the number of elements.
     return input_list
    
-x = sort_by_catagory()
-print(x)
-print_list(x)
+# x = sort_by_catagory()
+# print(x)
+# print_list(x)
